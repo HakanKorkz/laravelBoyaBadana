@@ -28,6 +28,7 @@ Route::controller(HomeController::class)->group(function () {
 Route::prefix("admin")->group(function () {
     Route::controller(AdminController::class)->group(function () {
         Route::get("/","home")->name("admin.home");
+        Route::get("blank","blank")->name("admin.blank");
         Route::get("login","login")->name("login");
     });
 })->middleware("auth");
